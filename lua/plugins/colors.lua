@@ -7,7 +7,6 @@ return {
   {
     "folke/tokyonight.nvim",
     config = function()
-      vim.cmd.colorscheme("tokyonight")
       enable_transparency()
     end,
   },
@@ -15,10 +14,17 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
     config = function()
-      -- NON attivarlo di default, lo userai manualmente
-      -- vim.cmd.colorscheme("gruvbox")
+      enable_transparency()
     end,
   },
+
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+	--    config = function()
+	-- enable_transparency()
+	--    end
+  },
+
 
   {
     "nvim-lualine/lualine.nvim",
