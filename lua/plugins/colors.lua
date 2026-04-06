@@ -1,21 +1,21 @@
-local function enable_transparency()
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
+-- local function enable_transparency()
+--   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- end
 
 return {
 
   {
     "folke/tokyonight.nvim",
-    config = function()
-      enable_transparency()
-    end,
+    -- config = function()
+    --   enable_transparency()
+    -- end,
   },
 
   {
     "ellisonleao/gruvbox.nvim",
-    config = function()
-      enable_transparency()
-    end,
+    -- config = function()
+    --   enable_transparency()
+    -- end,
   },
 
   {
@@ -32,7 +32,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
-      theme = "tokyonight",
+      theme = "auto",
     },
   },
 }
