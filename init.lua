@@ -1,27 +1,25 @@
 require('config.options')
 require('config.keybinds')
 require('config.lazy')
--- vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("gruvbox")
 -- scegli qui il tema
 
-local theme = "purple"
-
-if theme == "tokyo" then
-  vim.cmd.colorscheme("tokyonight")
-elseif theme == "gruvbox" then
-  vim.cmd.colorscheme("gruvbox")
-elseif theme == "red" then
-  require("plugins.colors.red_minimal").setup()
-elseif theme == "spurple" then
-  require("plugins.colors.purple_minimal").setup()
-elseif theme == "purple" then
-  require("plugins.colors.realpurple").setup()
-  -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
+-- local theme = "purple"
+--
+-- if theme == "red" then
+--   require("plugins.colors.red_minimal").setup()
+--
+-- elseif theme == "spurple" then
+--   require("plugins.colors.purple_minimal").setup()
+--
+-- elseif theme == "purple" then
+--   require("plugins.colors.realpurple").setup()
+--   -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- end
 
 -- trasparency
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 vim.opt.undofile = true
 
