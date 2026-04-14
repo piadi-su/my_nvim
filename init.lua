@@ -1,8 +1,8 @@
 require('config.options')
 require('config.keybinds')
 require('config.lazy')
-vim.cmd.colorscheme("tokyonight")
--- vim.cmd.colorscheme("gruvbox")
+-- vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("gruvbox")
 -- scegli qui il tema
 
 -- local theme = "purple"
@@ -17,7 +17,7 @@ vim.cmd.colorscheme("tokyonight")
 --   require("plugins.colors.realpurple").setup()
 --   -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- end
-
+--
 -- trasparency
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
