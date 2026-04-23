@@ -33,4 +33,27 @@ return {
 	    { name = "buffer" },
 	},
     },
+    {
+	"lukas-reineke/indent-blankline.nvim",
+	main = "ibl",
+	opts = {
+	    indent = { char = "│" },
+	    scope = {
+		enabled = true,
+		show_start = true,
+		show_end = true,
+	    },
+	},
+    },
+    {
+	"echasnovski/mini.animate",
+	version = false,
+	opts = {
+	    scroll = { enable = true },
+	    cursor = { enable = true },
+	    resize = { enable = true },
+	    open = { enable = true },
+	    close = { enable = true },
+	},
+    },
 }

@@ -19,7 +19,7 @@ vim.cmd.colorscheme("gruvbox")
 -- end
 --
 -- trasparency
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 vim.opt.undofile = true
 
