@@ -7,8 +7,7 @@ return {
 	'brenoprata10/nvim-highlight-colors',
 	config = function()
 	    require('nvim-highlight-colors').setup({})
-	end
-    },
+	end },
 
     -- auto closing parentesis
     {
@@ -45,15 +44,22 @@ return {
 	    },
 	},
     },
+	--    {
+	-- "echasnovski/mini.animate",
+	-- version = false,
+	-- opts = {
+	--     scroll = { enable = true },
+	--     cursor = { enable = true },
+	--     resize = { enable = true },
+	--     open = { enable = true },
+	--     close = { enable = true },
+	-- },
+	--    },
     {
-	"echasnovski/mini.animate",
-	version = false,
-	opts = {
-	    scroll = { enable = true },
-	    cursor = { enable = true },
-	    resize = { enable = true },
-	    open = { enable = true },
-	    close = { enable = true },
-	},
+	"akinsho/bufferline.nvim",
+	dependencies = "nvim-tree/nvim-web-devicons",
+	config = function()
+	    require("bufferline").setup{}
+	end
     },
 }
