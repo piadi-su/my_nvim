@@ -32,18 +32,18 @@ return {
 	    { name = "buffer" },
 	},
     },
-    {
-	"lukas-reineke/indent-blankline.nvim",
-	main = "ibl",
-	opts = {
-	    indent = { char = "│" },
-	    scope = {
-		enabled = true,
-		show_start = true,
-		show_end = true,
-	    },
-	},
-    },
+	--    {
+	-- "lukas-reineke/indent-blankline.nvim",
+	-- main = "ibl",
+	-- opts = {
+	--     indent = { char = "│" },
+	--     scope = {
+	-- 	enabled = true,
+	-- 	show_start = true,
+	-- 	show_end = true,
+	--     },
+	-- },
+	--    },
 	--    {
 	-- "echasnovski/mini.animate",
 	-- version = false,

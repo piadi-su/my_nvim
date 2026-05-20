@@ -5,7 +5,7 @@ require('config.lazy')
 vim.cmd.colorscheme("gruvbox")
 -- scegli qui il tema
 
--- local theme = "purple"
+-- local theme = "red"
 --
 -- if theme == "red" then
 --   require("plugins.colors.red_minimal").setup()
