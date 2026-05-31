@@ -24,6 +24,20 @@ return {
 	-- enable_transparency()
 	--    end
   },
+  {
+      "mcchrish/zenbones.nvim",
+      dependencies = "rktjmp/lush.nvim",
+      priority = 1000,
+  },
+
+  {
+      "aktersnurra/no-clown-fiesta.nvim",
+      priority = 1000,
+      config = function()
+	  vim.cmd.colorscheme("no-clown-fiesta")
+      end
+  },
+
 
 
   -- {

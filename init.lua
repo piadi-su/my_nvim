@@ -3,6 +3,8 @@ require('config.keybinds')
 require('config.lazy')
 -- vim.cmd.colorscheme("tokyonight")
 vim.cmd.colorscheme("gruvbox")
+
+
 -- scegli qui il tema
 
 -- local theme = "red"
@@ -17,9 +19,17 @@ vim.cmd.colorscheme("gruvbox")
 --   require("plugins.colors.realpurple").setup()
 --   -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- end
---
+
 -- trasparency
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#222222", bg = "#000000" })
+
+
+
+vim.cmd(":hi statusline guibg=NONE")
 
 vim.opt.undofile = true
 
