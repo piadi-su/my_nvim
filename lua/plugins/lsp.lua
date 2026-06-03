@@ -19,6 +19,7 @@ return {
           "cssls",
           "bashls",
           "lua_ls",
+	  "gopls"
         },
       })
     end,
@@ -34,6 +35,7 @@ return {
       vim.lsp.config("html", {})
       vim.lsp.config("cssls", {})
       vim.lsp.config("bashls", {})
+      vim.lsp.config("gopls", {})
 
       vim.lsp.config("lua_ls", {
         settings = {
@@ -54,6 +56,7 @@ return {
         "cssls",
         "bashls",
         "lua_ls",
+	"gopls",
       })
     end,
   },
