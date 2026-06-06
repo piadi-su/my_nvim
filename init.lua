@@ -1,8 +1,9 @@
 require('config.options')
 require('config.keybinds')
 require('config.lazy')
--- vim.cmd.colorscheme("tokyonight")
 vim.cmd.colorscheme("gruvbox")
+-- vim.cmd.colorscheme("no-clown-fiesta")
+vim.cmd.colorscheme("zenbones")
 
 
 -- scegli qui il tema
@@ -23,11 +24,12 @@ vim.cmd.colorscheme("gruvbox")
 -- trasparency
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "#1c1c1c" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1c1c1c" })
-vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#222222", bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#1c1c1c" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1c1c1c" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#222222", bg = "#000000" })
 
 
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 vim.cmd(":hi statusline guibg=NONE")
 
