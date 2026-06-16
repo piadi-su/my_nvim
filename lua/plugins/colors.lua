@@ -11,12 +11,24 @@ return {
     -- end,
   },
 
+  -- NORMAL GRUVBOX
+  -- {
+  --   "ellisonleao/gruvbox.nvim",
+  --   -- config = function()
+  --   --   enable_transparency()
+  --   -- end,
+  -- },
+
   {
-    "ellisonleao/gruvbox.nvim",
-    -- config = function()
-    --   enable_transparency()
-    -- end,
+	  "ellisonleao/gruvbox.nvim",
+	  priority = 1000,
+	  config = function()
+		  require("gruvbox").setup({
+			  contrast = "hard",
+		  })
+	  end,
   },
+
 
   {
     "nyoom-engineering/oxocarbon.nvim",
@@ -32,21 +44,37 @@ return {
 
   {
       "aktersnurra/no-clown-fiesta.nvim",
-      priority = 1000,
-      config = function()
-	  vim.cmd.colorscheme("no-clown-fiesta")
-      end
+	  --    priority = 1000,
+	  --    config = function()
+	  -- vim.cmd.colorscheme("no-clown-fiesta")
+	  --    end
   },
 
 
+  {
+	  "catppuccin/nvim",
+	  name = "catppuccin",
+	  priority = 1000,
+	  config = function()
+		  require("catppuccin").setup({
+			  flavour = "mocha", -- dark theme
+			  transparent_background = false,
+			  integrations = {
+				  lualine = true,
+			  },
+		  })
 
-  -- {
-  --   "nvim-lualine/lualine.nvim",
-  --   dependencies = {
-  --     "nvim-tree/nvim-web-devicons",
-  --   },
-  --   opts = {
-  --     theme = "auto",
-  --   },
-  -- },
+	  end,
+  },
+
+  {
+	  "nvim-lualine/lualine.nvim",
+	  dependencies = {
+		  "nvim-tree/nvim-web-devicons",
+	  },
+	  opts = {
+		  theme = "auto",
+	  },
+  },
+
 }
