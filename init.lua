@@ -6,38 +6,40 @@ require('config.lazy')
 -- vim.cmd.colorscheme("zenbones")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("cosec-twilight")
+
 
 -- scegli qui il tema
 
-local theme = "hacker"
-
-if theme == "red" then
-  require("plugins.colors.red_minimal").setup()
-
-elseif theme == "spurple" then
-  require("plugins.colors.purple_minimal").setup()
-
-elseif theme == "purple" then
-  require("plugins.colors.realpurple").setup()
-  -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-elseif theme == "helix" then
-  require("plugins.colors.helix")
-elseif theme == "hacker" then
-  require("plugins.colors.hacker").setup()
-end
+-- local theme = "hacker"
+--
+-- if theme == "red" then
+--   require("plugins.colors.red_minimal").setup()
+--
+-- elseif theme == "spurple" then
+--   require("plugins.colors.purple_minimal").setup()
+--
+-- elseif theme == "purple" then
+--   require("plugins.colors.realpurple").setup()
+--   -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- elseif theme == "helix" then
+--   require("plugins.colors.helix")
+-- elseif theme == "hacker" then
+--   require("plugins.colors.hacker").setup()
+-- end
 
 -- trasparency
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 -- semi black background
--- vim.api.nvim_set_hl(0, "Normal", { bg = "#1c1c1c" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1c1c1c" })
--- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#222222", bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#000000", bg = "#000000" })
 
 -- black background
--- vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1d2021" })
--- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#1d2021", bg = "#1d2021" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#141414" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#141414" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#141414", bg = "#141414" })
 
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
