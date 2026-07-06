@@ -45,9 +45,17 @@ return {
 				-- show_start = true,
 				-- show_end = true,
 			},
-		},
-    },
-	
+			exclude = {
+				filetypes = {
+					"dashboard",
+					"NvimTree",
+					"lazy",
+					"mason",
+					"help",
+				},
+			},
+    	},
+	},
 	--    {
 	-- "echasnovski/mini.animate",
 	-- version = false,
