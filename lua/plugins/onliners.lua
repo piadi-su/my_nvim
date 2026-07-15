@@ -69,10 +69,33 @@ return {
 	--    },
 
     {
-	"akinsho/bufferline.nvim",
-	dependencies = "nvim-tree/nvim-web-devicons",
-	config = function()
-	    require("bufferline").setup{}
-	end
+		"akinsho/bufferline.nvim",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("bufferline").setup{}
+		end
     },
+
+	{
+		"sphamba/smear-cursor.nvim",
+
+		opts = {
+			smear_between_buffers = true,
+
+			smear_between_neighbor_lines = true,
+
+			scroll_buffer_space = true,
+
+			legacy_computing_symbols_support = false,
+
+			smear_insert_mode = true,
+		},
+
+	},
+
+	{
+		"HiPhish/rainbow-delimiters.nvim",
+	}
+
+
 }
