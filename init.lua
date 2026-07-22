@@ -6,12 +6,23 @@ require('config.lazy')
 -- vim.cmd.colorscheme("zenbones")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("onedark")
-vim.cmd.colorscheme("cosec-twilight")
+-- vim.cmd.colorscheme("cosec-twilight")
+
+-- init.lua
+
+
+-- for my colorscheme
+require("config.lazy")
+
+vim.schedule(function()
+	vim.cmd.colorscheme("batnight")
+end)
+
 
 
 -- scegli qui il tema
 
--- local theme = "hacker"
+-- local theme = "helix"
 --
 -- if theme == "red" then
 --   require("plugins.colors.red_minimal").setup()
@@ -26,6 +37,8 @@ vim.cmd.colorscheme("cosec-twilight")
 --   require("plugins.colors.helix")
 -- elseif theme == "hacker" then
 --   require("plugins.colors.hacker").setup()
+-- elseif theme == "cococry" then
+--   require("plugins.colors.cococry").setup()
 -- end
 
 -- trasparency

@@ -21,4 +21,20 @@ return {
     },
   },
 
+
+  {
+	  dir = vim.fn.stdpath("config") .. "/lua/plugins/batnight",
+	  name = "batnight",
+	  lazy = false,
+	  priority = 1000,
+
+	  config = function()
+		  vim.opt.rtp:append(
+			  vim.fn.stdpath("config") .. "/lua/plugins/batnight"
+		  )
+
+		  vim.cmd.colorscheme("batnight")
+	  end,
+  },
+
 }
