@@ -12,30 +12,30 @@ return {
   },
 
   -- NORMAL GRUVBOX
-  -- {
-  --   "ellisonleao/gruvbox.nvim",
-  --   -- config = function()
-  --   --   enable_transparency()
-  --   -- end,
-  -- },
+  {
+    "ellisonleao/gruvbox.nvim",
+    -- config = function()
+    --   enable_transparency()
+    -- end,
+  },
+
 
   {
-	  "ellisonleao/gruvbox.nvim",
+	  "silentium-theme/silentium.nvim",
+	  lazy = false,
 	  priority = 1000,
 	  config = function()
-		  require("gruvbox").setup({
-			  contrast = "hard",
+		  local silentium = require("silentium")
+
+		  silentium.setup({
+			  accent = silentium.accents.peach, -- o qualsiasi altro colore/accetto desiderato
 		  })
+
+		  vim.cmd.colorscheme("silentium")
 	  end,
   },
 
 
-  {
-    "nyoom-engineering/oxocarbon.nvim",
-	--    config = function()
-	-- enable_transparency()
-	--    end
-  },
   {
       "mcchrish/zenbones.nvim",
       dependencies = "rktjmp/lush.nvim",
@@ -57,21 +57,7 @@ return {
     dependencies = "rktjmp/lush.nvim",
   },
 
-  {
-	  "catppuccin/nvim",
-	  name = "catppuccin",
-	  priority = 1000,
-	  config = function()
-		  require("catppuccin").setup({
-			  flavour = "mocha", -- dark theme
-			  transparent_background = false,
-			  integrations = {
-				  lualine = true,
-			  },
-		  })
 
-	  end,
-  },
 
   {
 	  "navarasu/onedark.nvim",
@@ -81,6 +67,23 @@ return {
 			  style = "dark",
 		  })
 		  require("onedark").load()
+	  end,
+  },
+
+  {
+	  "M32341/dracula.nvim",
+	  lazy = false,
+	  priority = 1000,
+	  config = function()
+		  local dracula = require("dracula")
+		  dracula.setup({
+			  colors = {
+				  bg = "#21222c", -- Sfondo più scuro simile a Doom Emacs
+			  },
+			  show_end_of_buffer = true,
+			  transparent_bg = false,
+		  })
+		  vim.cmd.colorscheme("dracula")
 	  end,
   },
 

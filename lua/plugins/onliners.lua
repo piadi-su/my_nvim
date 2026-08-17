@@ -38,6 +38,7 @@ return {
 	-- 	main = "ibl",
 	-- 	opts = {
 	-- 		indent = { char = "│" },
+	-- 		-- indent = { char = "│" },
 	-- 		-- indent = { char = "▏" },
 	-- 		-- indent = { char = "╎" },
 	-- 		-- indent = { char = "┇" },
@@ -97,6 +98,6 @@ return {
 	-- {
 	-- 	"HiPhish/rainbow-delimiters.nvim",
 	-- },
-
+	--
 
 }

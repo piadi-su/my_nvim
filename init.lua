@@ -2,14 +2,19 @@ require('config.options')
 require('config.keybinds')
 require('config.lazy')
 
-vim.cmd.colorscheme("quiet")
+-- vim.cmd.colorscheme("quiet")
+-- vim.cmd.colorscheme("default")
+-- vim.cmd.colorscheme("koehler")
 -- vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("dracula")
 -- vim.cmd.colorscheme("no-clown-fiesta")
 -- vim.cmd.colorscheme("zenbones")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("onedark")
 -- vim.cmd.colorscheme("cosec-twilight")
 -- vim.cmd.colorscheme("retrobox")
+-- vim.cmd.colorscheme("silentium")
+
 
 
 -- for my colorscheme
@@ -17,6 +22,7 @@ vim.cmd.colorscheme("quiet")
 -- vim.schedule(function()
 -- 	vim.cmd.colorscheme("batnight")
 -- end)
+
 
 
 
@@ -43,19 +49,23 @@ vim.cmd.colorscheme("quiet")
 
 
 -- trasparency
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 -- semi black background
-vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#000000", bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#000000", bg = "#000000" })
 
 -- black background
--- vim.api.nvim_set_hl(0, "Normal", { bg = "#171513" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#171513" })
--- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#171513", bg = "#171513" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#121212" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#121212" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#121212", bg = "#121212" })
 
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#181818" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#181818" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#181818", bg = "#181818" })
 
+vim.opt.termguicolors = true
 
 -- normal statusline
 -- vim.opt.guicursor = "a:block"
