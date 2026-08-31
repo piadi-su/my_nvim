@@ -33,31 +33,32 @@ return {
 		},
 	},
 
-	--    {
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	main = "ibl",
-	-- 	opts = {
-	-- 		indent = { char = "│" },
-	-- 		-- indent = { char = "│" },
-	-- 		-- indent = { char = "▏" },
-	-- 		-- indent = { char = "╎" },
-	-- 		-- indent = { char = "┇" },
-	-- 		scope = {
-	-- 			enabled = true,
-	-- 			-- show_start = true,
-	-- 			-- show_end = true,
-	-- 		},
-	-- 		exclude = {
-	-- 			filetypes = {
-	-- 				"dashboard",
-	-- 				"NvimTree",
-	-- 				"lazy",
-	-- 				"mason",
-	-- 				"help",
-	-- 			},
-	-- 		},
-	--    	},
-	-- },
+	   {
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {
+			-- indent = { char = "›" },
+			indent = { char = "│" },
+			-- indent = { char = "│" },
+			-- indent = { char = "▏" },
+			-- indent = { char = "╎" },
+			-- indent = { char = "┇" },
+			scope = {
+				enabled = true,
+				-- show_start = true,
+				-- show_end = true,
+			},
+			exclude = {
+				filetypes = {
+					"dashboard",
+					"NvimTree",
+					"lazy",
+					"mason",
+					"help",
+				},
+			},
+	   	},
+	},
 	--    {
 	-- "echasnovski/mini.animate",
 	-- version = false,
