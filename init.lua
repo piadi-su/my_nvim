@@ -5,13 +5,13 @@ require('config.lazy')
 -- vim.cmd.colorscheme("quiet")
 -- vim.cmd.colorscheme("default")
 -- vim.cmd.colorscheme("koehler")
-vim.cmd.colorscheme("gruvbox")
+-- vim.cmd.colorscheme("gruvbox")
 -- vim.cmd.colorscheme("dracula")
 -- vim.cmd.colorscheme("no-clown-fiesta")
 -- vim.cmd.colorscheme("zenbones")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("onedark")
--- vim.cmd.colorscheme("cosec-twilight")
+vim.cmd.colorscheme("cosec-twilight")
 -- vim.cmd.colorscheme("retrobox")
 -- vim.cmd.colorscheme("silentium")
 -- vim.cmd("colorscheme dracula")
@@ -50,7 +50,7 @@ vim.cmd.colorscheme("gruvbox")
 
 
 -- trasparency
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 -- semi black background
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })

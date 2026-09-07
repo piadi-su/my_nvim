@@ -8,6 +8,6 @@ vim.opt.expandtab = false
 
 -- vim.opt.numberwidth = 8
 -- Aumenta lo spazio a sinistra dei numeri creando un margine custom
-vim.opt.statuscolumn = '   %=  %l    '
+-- vim.opt.statuscolumn = '   %=  %l    '
 
 
