@@ -14,7 +14,7 @@ return {
         ensure_installed = {
           "clangd",       -- C / C++
           "pyright",      -- Python
-          "csharp_ls",    -- C#
+          -- "csharp_ls",    -- C#
           "html",
           "cssls",
           "bashls",
