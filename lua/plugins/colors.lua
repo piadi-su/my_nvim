@@ -41,7 +41,7 @@ return {
 		  local silentium = require("silentium")
 
 		  silentium.setup({
-			  accent = silentium.accents.peach, -- o qualsiasi altro colore/accetto desiderato
+			  accent = silentium.accents.peach, 
 		  })
 
 		  vim.cmd.colorscheme("silentium")
@@ -108,9 +108,8 @@ return {
 				  globalstatus = true,
 			  },
 			  sections = {
-				  -- LATO SINISTRO: Modalità (MAIUSCOLA) + Simbolo + Nome file
 				  lualine_a = {
-					  { "mode" }, -- Rimosso il tolower(), ora usa il default in maiuscolo
+					  { "mode" }, 
 					  { 
 						  function() 
 							  return " ⛩️"
@@ -122,7 +121,6 @@ return {
 				  lualine_b = {},
 				  lualine_c = {},
 
-				  -- LATO DESTRA: Linguaggio (filetype) e posizione
 				  lualine_x = {},
 				  lualine_y = {},
 				  lualine_z = { 

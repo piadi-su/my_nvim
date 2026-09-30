@@ -28,7 +28,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      -- 🔥 nuovo metodo (no deprecation)
       vim.lsp.config("clangd", {})
       vim.lsp.config("pyright", {})
       vim.lsp.config("csharp_ls", {})
