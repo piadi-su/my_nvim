@@ -112,8 +112,9 @@ return {
 					  { "mode" }, 
 					  { 
 						  function() 
-							  return " ⛩️"
+							  return " 牛"
 							   -- 後  雷  雨  土  牛
+							   -- 後雷雨土牛⛩️
 						  end 
 					  },
 					  { "filename", path = 1, fmt = function(str) return "  " .. str end }

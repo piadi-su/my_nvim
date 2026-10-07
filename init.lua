@@ -2,6 +2,7 @@ require('config.options')
 require('config.keybinds')
 require('config.lazy')
 
+
 -- vim.cmd.colorscheme("quiet")
 -- vim.cmd.colorscheme("default")
 -- vim.cmd.colorscheme("koehler")
@@ -17,14 +18,17 @@ require('config.lazy')
 -- vim.cmd.colorscheme("nordic")
 -- vim.cmd("colorscheme zenwritten")
 -- vim.cmd("colorscheme neobones")
+-- vim.cmd.colorscheme("slate")
+-- vim.cmd.colorscheme("industry")
+vim.cmd.colorscheme("vim")
 
-vim.o.background = "dark" 
-
-require("gruvbox").setup({
-  contrast = "hard",
-})
-
-vim.cmd([[colorscheme gruvbox]])
+-- vim.o.background = "dark"
+--
+-- require("gruvbox").setup({
+--   contrast = "hard",
+-- })
+--
+-- vim.cmd([[colorscheme gruvbox]])
 
 
 -- for my colorscheme
@@ -83,3 +87,7 @@ vim.opt.undofile = true
 -- directory dove salvare la history
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 vim.opt.autochdir = true
+
+vim.opt.termguicolors = false
+vim.cmd("highlight StatusLine cterm=reverse ctermfg=NONE ctermbg=NONE")
+vim.cmd("highlight TabLineFill cterm=NONE ctermfg=NONE ctermbg=NONE")

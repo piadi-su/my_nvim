@@ -8,6 +8,6 @@ vim.opt.expandtab = false
 vim.opt.autochdir = true
 
 -- vim.opt.numberwidth = 8
--- vim.opt.statuscolumn = '   %=  %l    '
+vim.opt.statuscolumn = '  %=  %l  '
 
 
