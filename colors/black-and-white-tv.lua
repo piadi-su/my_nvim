@@ -1,5 +1,3 @@
--- Black and White TV Color Scheme per Neovim
--- Convertito da VS Code (moondevaa) con supporto Tree-sitter & LSP
 
 vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") then
@@ -10,7 +8,6 @@ vim.o.termguicolors = true
 vim.g.colors_name = "black-and-white-tv"
 
 local highlights = {
-  -- Interfaccia e Editor di base
   Normal        = { fg = "#d4d4d4", bg = "#0a0a0a" },
   NormalFloat   = { fg = "#cccccc", bg = "#252526" },
   SignColumn    = { fg = "#858585", bg = "#0a0a0a" },
@@ -25,20 +22,17 @@ local highlights = {
   Whitespace    = { fg = "#404040" },
   EndOfBuffer   = { fg = "#0a0a0a" },
 
-  -- Selezioni e Ricerche
   Visual        = { bg = "#3b3b3b" },
   VisualNOS     = { bg = "#3a3d41" },
   Search        = { fg = "#d4d4d4", bg = "#08082f" },
   IncSearch     = { fg = "#ffffff", bg = "#ea5c00" },
   CurSearch     = { fg = "#ffffff", bg = "#ea5c00" },
 
-  -- Popup / Menu di completamento (Telescope / CMP)
   Pmenu         = { fg = "#cccccc", bg = "#252526" },
   PmenuSel      = { fg = "#ffffff", bg = "#062f4a" },
   PmenuSbar     = { bg = "#252526" },
   PmenuThumb    = { bg = "#797979" },
 
-  -- Finestre e Bordi
   VertSplit     = { fg = "#444444" },
   WinSeparator  = { fg = "#444444" },
   StatusLine    = { fg = "#ffffff", bg = "#000000" },
@@ -47,7 +41,6 @@ local highlights = {
   TabLineSel    = { fg = "#ffffff", bg = "#1e1e1e" },
   TabLineFill   = { bg = "#252526" },
 
-  -- Sintassi VIM Standard
   Comment       = { fg = "#3b3b3b", italic = true },
   Constant      = { fg = "#8a8a8a" },
   String        = { fg = "#bbbbbb" },
@@ -82,13 +75,11 @@ local highlights = {
   Error         = { fg = "#ffffff", bg = "#f44747" },
   Todo          = { fg = "#8a8a8a", bold = true },
 
-  -- Git / Diff
   DiffAdd       = { fg = "#bbbbbb", bg = "#2d381b" },
   DiffChange    = { fg = "#767676", bg = "#0c3b4a" },
   DiffDelete    = { fg = "#ececec", bg = "#4a1215" },
   DiffText      = { fg = "#cecece", bg = "#383838" },
 
-  -- Tree-sitter Highlighting (Previene i colori a caso nei file moderni)
   ["@comment"]               = { fg = "#3b3b3b", italic = true },
   ["@constant"]              = { fg = "#8a8a8a" },
   ["@constant.builtin"]      = { fg = "#8a8a8a" },
@@ -130,7 +121,6 @@ local highlights = {
   ["@tag.attribute"]         = { fg = "#8a8a8a" },
   ["@tag.delimiter"]         = { fg = "#d4d4d4" },
 
-  -- LSP Semantic Tokens
   ["@lsp.type.class"]         = { link = "@type" },
   ["@lsp.type.enum"]          = { link = "@type" },
   ["@lsp.type.interface"]     = { link = "@type" },
@@ -143,7 +133,6 @@ local highlights = {
   ["@lsp.type.keyword"]       = { link = "@keyword" },
 }
 
--- Applica i gruppi
 for group, settings in pairs(highlights) do
   vim.api.nvim_set_hl(0, group, settings)
 end
