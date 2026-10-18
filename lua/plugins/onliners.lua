@@ -73,15 +73,15 @@ return {
 
 
 
-	-- {
-	-- 	'MeanderingProgrammer/render-markdown.nvim',
-	-- 	dependencies = { 
-	-- 		'nvim-treesitter/nvim-treesitter', 
-	-- 		'nvim-tree/nvim-web-devicons' -- opzionale, per le icone dei linguaggi nei blocchi di codice
-	-- 	},
-	-- 	opts = {},
-	-- 	ft = { 'markdown' },
-	-- },
+	{
+		'MeanderingProgrammer/render-markdown.nvim',
+		dependencies = { 
+			'nvim-treesitter/nvim-treesitter', 
+			'nvim-tree/nvim-web-devicons' -- opzionale, per le icone dei linguaggi nei blocchi di codice
+		},
+		opts = {},
+		ft = { 'markdown' },
+	},
 
 	-- ~/.config/nvim/lua/plugins/zenmode.lua
 	-- {

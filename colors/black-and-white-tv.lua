@@ -1,0 +1,149 @@
+-- Black and White TV Color Scheme per Neovim
+-- Convertito da VS Code (moondevaa) con supporto Tree-sitter & LSP
+
+vim.cmd("highlight clear")
+if vim.fn.exists("syntax_on") then
+  vim.cmd("syntax reset")
+end
+
+vim.o.termguicolors = true
+vim.g.colors_name = "black-and-white-tv"
+
+local highlights = {
+  -- Interfaccia e Editor di base
+  Normal        = { fg = "#d4d4d4", bg = "#0a0a0a" },
+  NormalFloat   = { fg = "#cccccc", bg = "#252526" },
+  SignColumn    = { fg = "#858585", bg = "#0a0a0a" },
+  ColorColumn   = { bg = "#1f1f1f" },
+  Cursor        = { fg = "#000000", bg = "#aeafad" },
+  CursorLine    = { bg = "#1a1a1a" },
+  CursorLineNr  = { fg = "#c6c6c6" },
+  LineNr        = { fg = "#858585" },
+  Directory     = { fg = "#767676" },
+  NonText       = { fg = "#404040" },
+  SpecialKey    = { fg = "#404040" },
+  Whitespace    = { fg = "#404040" },
+  EndOfBuffer   = { fg = "#0a0a0a" },
+
+  -- Selezioni e Ricerche
+  Visual        = { bg = "#3b3b3b" },
+  VisualNOS     = { bg = "#3a3d41" },
+  Search        = { fg = "#d4d4d4", bg = "#08082f" },
+  IncSearch     = { fg = "#ffffff", bg = "#ea5c00" },
+  CurSearch     = { fg = "#ffffff", bg = "#ea5c00" },
+
+  -- Popup / Menu di completamento (Telescope / CMP)
+  Pmenu         = { fg = "#cccccc", bg = "#252526" },
+  PmenuSel      = { fg = "#ffffff", bg = "#062f4a" },
+  PmenuSbar     = { bg = "#252526" },
+  PmenuThumb    = { bg = "#797979" },
+
+  -- Finestre e Bordi
+  VertSplit     = { fg = "#444444" },
+  WinSeparator  = { fg = "#444444" },
+  StatusLine    = { fg = "#ffffff", bg = "#000000" },
+  StatusLineNC  = { fg = "#cccccc", bg = "#141414" },
+  TabLine       = { fg = "#ffffff", bg = "#2d2d2d" },
+  TabLineSel    = { fg = "#ffffff", bg = "#1e1e1e" },
+  TabLineFill   = { bg = "#252526" },
+
+  -- Sintassi VIM Standard
+  Comment       = { fg = "#3b3b3b", italic = true },
+  Constant      = { fg = "#8a8a8a" },
+  String        = { fg = "#bbbbbb" },
+  Character     = { fg = "#bbbbbb" },
+  Number        = { fg = "#8a8a8a" },
+  Boolean       = { fg = "#8a8a8a" },
+  Float         = { fg = "#8a8a8a" },
+  Identifier    = { fg = "#ececec" },
+  Function      = { fg = "#cecece" },
+  Statement     = { fg = "#cfc276" },
+  Conditional   = { fg = "#cfc276" },
+  Repeat        = { fg = "#cfc276" },
+  Label         = { fg = "#cfc276" },
+  Operator      = { fg = "#d4d4d4" },
+  Keyword       = { fg = "#cfc276" },
+  Exception     = { fg = "#cfc276" },
+  PreProc       = { fg = "#cfc276" },
+  Include       = { fg = "#cfc276" },
+  Define        = { fg = "#cfc276" },
+  Macro         = { fg = "#cfc276" },
+  Type          = { fg = "#767676" },
+  StorageClass  = { fg = "#cfc276" },
+  Structure     = { fg = "#767676" },
+  Typedef       = { fg = "#767676" },
+  Special       = { fg = "#585858" },
+  SpecialChar   = { fg = "#585858" },
+  Tag           = { fg = "#ececec" },
+  Delimiter     = { fg = "#d4d4d4" },
+  Debug         = { fg = "#cfc276" },
+  Underlined    = { underline = true },
+  Ignore        = { fg = "#767676" },
+  Error         = { fg = "#ffffff", bg = "#f44747" },
+  Todo          = { fg = "#8a8a8a", bold = true },
+
+  -- Git / Diff
+  DiffAdd       = { fg = "#bbbbbb", bg = "#2d381b" },
+  DiffChange    = { fg = "#767676", bg = "#0c3b4a" },
+  DiffDelete    = { fg = "#ececec", bg = "#4a1215" },
+  DiffText      = { fg = "#cecece", bg = "#383838" },
+
+  -- Tree-sitter Highlighting (Previene i colori a caso nei file moderni)
+  ["@comment"]               = { fg = "#3b3b3b", italic = true },
+  ["@constant"]              = { fg = "#8a8a8a" },
+  ["@constant.builtin"]      = { fg = "#8a8a8a" },
+  ["@constant.macro"]        = { fg = "#8a8a8a" },
+  ["@string"]                = { fg = "#bbbbbb" },
+  ["@string.regex"]          = { fg = "#585858" },
+  ["@string.escape"]         = { fg = "#585858" },
+  ["@character"]             = { fg = "#bbbbbb" },
+  ["@number"]                = { fg = "#8a8a8a" },
+  ["@boolean"]               = { fg = "#8a8a8a" },
+  ["@number.float"]          = { fg = "#8a8a8a" },
+  ["@function"]              = { fg = "#cecece" },
+  ["@function.builtin"]      = { fg = "#585858" },
+  ["@function.macro"]        = { fg = "#cecece" },
+  ["@parameter"]             = { fg = "#d4d4d4" },
+  ["@method"]                = { fg = "#cecece" },
+  ["@field"]                 = { fg = "#ececec" },
+  ["@property"]              = { fg = "#ececec" },
+  ["@constructor"]           = { fg = "#767676" },
+  ["@conditional"]           = { fg = "#cfc276" },
+  ["@repeat"]                = { fg = "#cfc276" },
+  ["@label"]                 = { fg = "#cfc276" },
+  ["@operator"]              = { fg = "#585858" },
+  ["@keyword"]               = { fg = "#cfc276" },
+  ["@keyword.function"]      = { fg = "#cfc276" },
+  ["@keyword.operator"]      = { fg = "#cfc276" },
+  ["@exception"]             = { fg = "#cfc276" },
+  ["@type"]                  = { fg = "#767676" },
+  ["@type.builtin"]          = { fg = "#767676" },
+  ["@type.qualifier"]        = { fg = "#cfc276" },
+  ["@structure"]             = { fg = "#767676" },
+  ["@include"]               = { fg = "#cfc276" },
+  ["@variable"]              = { fg = "#ececec" },
+  ["@variable.builtin"]      = { fg = "#767676" },
+  ["@punctuation.delimiter"] = { fg = "#d4d4d4" },
+  ["@punctuation.bracket"]   = { fg = "#d4d4d4" },
+  ["@punctuation.special"]   = { fg = "#d4d4d4" },
+  ["@tag"]                   = { fg = "#ececec" },
+  ["@tag.attribute"]         = { fg = "#8a8a8a" },
+  ["@tag.delimiter"]         = { fg = "#d4d4d4" },
+
+  -- LSP Semantic Tokens
+  ["@lsp.type.class"]         = { link = "@type" },
+  ["@lsp.type.enum"]          = { link = "@type" },
+  ["@lsp.type.interface"]     = { link = "@type" },
+  ["@lsp.type.parameter"]     = { link = "@parameter" },
+  ["@lsp.type.property"]      = { link = "@property" },
+  ["@lsp.type.variable"]      = { link = "@variable" },
+  ["@lsp.type.function"]      = { link = "@function" },
+  ["@lsp.type.method"]        = { link = "@method" },
+  ["@lsp.type.macro"]         = { link = "@constant.macro" },
+  ["@lsp.type.keyword"]       = { link = "@keyword" },
+}
+
+-- Applica i gruppi
+for group, settings in pairs(highlights) do
+  vim.api.nvim_set_hl(0, group, settings)
+end
